@@ -1,0 +1,545 @@
+@font-face {
+    font-family: 'poetsenone-regular';
+    src: url('./fonts/PoetsenOne-Regular.ttf');
+
+    font-family: 'araboto';
+    src: url('./fonts/araboto-normal-400.ttf');
+
+
+    font-family: 'araboto-bold';
+    src: url('./fonts/araboto-bold-400.ttf');
+
+}
+
+:root {
+    --color-fondoPrincipal: white; /* Define el color de fondo deseado */
+}
+body{
+    background-color: var(--color-fondoPrincipal);
+}
+
+.titulo-negro {
+    font-family: 'poetsenone-regular';
+
+}
+
+.texto-negro {
+    font-family: 'araboto';
+}
+
+.texto-negro-bold {
+    font-family: 'araboto-bold';
+
+}
+
+.titulo-blanco {
+    font-family: 'poetsenone-regular';
+    color: white;
+}
+
+.texto-blanco {
+    font-family: 'araboto';
+    color: white;
+}
+
+.texto-blanco-bold {
+    font-family: 'araboto-bold';
+    color: white;
+}
+
+
+/* NUEVAS CONVENCIONES */
+/**********************************/
+.grid-container-nosotros {
+    grid-area: main-row;
+    display: grid;
+
+    position: relative;
+    grid-template-areas:
+        'nuestro-equipo'
+        'nuestros-miembros'
+        'nuestros-historias'
+        'nuestros-misio-vision';
+    grid-template-rows: auto auto auto auto auto;
+    padding-top: 2em; 
+    background-color: var(--color-fondoPrincipal);
+}
+
+.grid-container-nosotros article {
+    display: grid;
+    text-align: center;
+    color: black;
+    /* border: 1px solid black; */
+}
+
+.grid-container-nosotros div {
+    /* display: grid; */
+    text-align: center;
+    color: black;
+}
+
+
+/***************************************/
+.equipo {
+    grid-column: 1 / 4;
+    grid-area: nuestro-equipo;
+    display: grid;
+    border: 0px;
+    background: white;
+    justify-content: space-around;
+    padding-left: 50px;
+
+    grid-template-areas:
+        'equipo-left equipo-right';
+    grid-template-columns: auto auto;
+}
+
+.equipo-left {
+    grid-area: equipo-left;
+    position: relative;
+    /* top: 35px; */
+    /* width: 25px; */
+    /* height: 25px*/
+}
+
+.equipo-title {
+    font-family: 'poetsenone-regular';
+}
+
+.equipo-text {
+    font-family: 'araboto';
+}
+
+.equipo-right {
+
+    grid-area: equipo-right;
+}
+
+.equipo-img {}
+
+/*********extras*******************/
+.equipo div {
+    grid-row: 2;
+    border: 0px;
+}
+
+
+.equipo-img {
+    height: 390px;
+    width: 520px;
+}
+
+.equipo .equipo-title {
+    font-size: 66px;
+    font-weight: 100;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+
+.equipo .equipo-text {
+    font-size: 25px;
+    font-weight: bold;
+    width: 590px;
+    text-align: left;
+    line-height: 30px;
+}
+
+
+/***********************************/
+.members {
+    grid-area: nuestros-miembros;
+    display: grid;
+    border: 0px;
+    height: 1582px;
+    position: relative;
+    background-color: #fff;
+    /* align-items: center; */
+    grid-template-areas:
+    'f-superior' 'f-central' 'f-inferior';
+    grid-template-rows: auto auto auto;
+    grid-auto-columns: 25% 25% 25% 25%;
+}
+
+.membersBackgorund {
+    background-image: url('../img/nosotros/bg-integrantes.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 1em;
+    display: grid;
+    align-content: space-around;
+    padding-bottom: 18em;
+}
+
+.members-profile {
+    display: grid;
+    width: 150px;
+    height: 251px;
+    border-radius: 50px;
+    justify-items: stretch;
+    align-items: center;
+    grid-column: auto; /* Se ajustará automáticamente según su posición */
+    grid-row: auto; /* Se ajustará automáticamente según su posición */
+}
+
+.presidenta {
+    grid-area: f-superior;
+    grid-column: 1; /* Ajustar según la posición en la fila */
+}
+.vicipresidenta{
+    margin-top: 2em;
+}
+.vicepresidenta {
+    grid-column: 2; /* Ajustar según la posición en la fila */
+    margin-top: 2em;
+}
+
+.secretaria {
+    grid-column: 3; /* Ajustar según la posición en la fila */
+    margin-top: 6em;
+}
+
+.tesorera {
+    grid-area: f-central;
+    grid-column: 4; /* Ajustar según la posición en la fila */
+}
+.vocal {
+    grid-area: f-inferior;
+    grid-column: 4; /* Ajustar según la posición en la fila */
+    margin-bottom: 6em;
+}
+.vocalbis {
+    grid-area: f-inferior;
+    grid-column: 1; /* Ajustar según la posición en la fila */
+}
+
+.vocalsuplente {
+    grid-area: f-inferior;
+    grid-column: 2; /* Ajustar según la posición en la fila */
+    margin-top: 2em;
+}
+.RevisoraDeCuentas {
+    grid-area: f-inferior;
+    grid-column: 3; /* Ajustar según la posición en la fila */
+    margin-top: 2em;
+}
+
+/* Y así sucesivamente para los otros roles */
+.members-message{}
+
+.members-profile img{
+    width: 8em;
+    height: 8em;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+
+.members-name {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 42px;
+}
+
+.members-role {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+}
+
+.members div {
+    grid-row: 2;
+    border: 0px;
+}
+
+.members-message{
+    display: grid;
+    /* width: 50%; */
+    /* height: fit-content; */
+    grid-column: 1/3;
+    align-items: end;
+    align-content: space-around;
+}
+
+.members-message p{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 47px;
+
+color: #FFFFFF;
+
+}
+/********************************/
+
+.history {
+    display: grid;
+    grid-area: nuestros-historias;
+    /* grid-column: 1 / 4; */
+    background: white;
+    justify-content: space-around;
+
+    grid-template-areas:
+        'Titulo'
+        'historia-1'
+        'historia-2'
+        'historia-3';
+    grid-template-rows: auto auto auto;
+
+}
+
+
+
+.history-title {
+    grid-area: Titulo;
+    padding: 1em;
+    font-size: 66px;
+    font-weight: 100;
+    font-family: 'poetsenone-regular';
+}
+
+/********************************/
+.HistoriaHogar {
+    grid-area: historia-1;
+    /* grid-column: 1 / 4; */
+    display: grid;
+    border: 0px;
+    background: white;
+    justify-content: space-around;
+    padding-bottom: 70px;
+}
+
+.HistoriaHogar div {
+    grid-row: 2;
+    border: 0px;
+    padding-left: 50px;
+}
+
+.HistoriaHogar1-text {
+    font-size: 25px;
+    position: relative;
+    top: 50px;
+    width: 590px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.HistoriaHogar1-img {
+    height: 477px;
+    width: 556px;
+    position: relative;
+    right: 20px;
+}
+
+
+.HistoriaHogarDesarrollo {
+    /* grid-column: 1 / 4; */
+    grid-area: historia-2;
+    display: grid;
+    border: 0px;
+    background: white;
+    justify-content: space-around;
+    padding-bottom: 70px;
+}
+
+.HistoriaHogarDesarrollo div {
+    grid-row: 2;
+    border: 0px;
+    padding-left: 50px;
+}
+
+
+.HistoriaHogarDesarrollo-text {
+    font-size: 25px;
+    width: 550px;
+    text-align: justify;
+    line-height: 30px;
+    position: relative;
+    top: 44px;
+}
+
+
+.HistoriaHogarDesarrollo-img {
+    height: 387px;
+    width: 576px;
+    position: relative;
+    left: 25px;
+}
+
+
+.HistoriaHogarDesarrollo div {
+    grid-row: 2;
+    border: 0px;
+    justify-items: end;
+    padding-right: 40px;
+}
+
+/************************/
+
+.HistoriaHogarActual {
+    display: grid;
+    grid-area: historia-3;
+    /* grid-column: 1 / 4; */
+    background: white;
+    justify-content: space-around;
+    padding-bottom: 100px;
+
+}
+
+.HistoriaHogarActual div {
+    grid-row: 2;
+    border: 0px;
+    padding-left: 50px;
+}
+
+.HistoriaHogarActual-left {
+
+    font-size: 25px;
+    position: relative;
+    top: 50px;
+    width: 590px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.HistoriaHogarActual-text {
+    font-family: 'araboto';
+}
+
+.HistoriaHogarActual-img {
+    height: 494px;
+    width: 563px;
+    position: relative;
+    right: 25px;
+}
+
+
+.HistoriaHogarActual .HistoriaHogarActual-text {
+
+    font-size: 25px;
+    position: relative;
+    right: 10px;
+    top: 20px;
+    width: 590px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+
+
+.HistoriaHogarActual div {
+    grid-row: 2;
+    border: 0px;
+    padding-left: 50px;
+}
+
+
+/*******************************************************/
+
+.misionVision {
+    display: grid;
+    grid-area: nuestros-misio-vision;
+    /* grid-column: 1/4; */
+    background: white;
+    justify-content: space-around;
+    background-image: url(../img/nosotros/bg-mision.png);
+    background-repeat: no-repeat;
+    background-size: 63em 46em;
+    /* background-size: 80% 110%;*/
+    padding-bottom: 28em;
+    grid-gap: 2em;
+    /* padding-top: 4em; */
+    position: absolute;
+    height: 740px;
+    justify-items: stretch;
+    width: 100%;
+}
+
+.misionVision-left {
+    width: 500px;
+    height: 500px;
+    background: red;
+    border-radius: 270px;
+    background: #FCDE93;
+    border: 10px solid #C25C01;
+    display: grid;
+
+}
+
+.misionVision-title {
+    font-size: 46px;
+    font-weight: 100;
+    text-align: center;
+    width: auto;
+    position: relative;
+    left: 52px;
+    padding-top: 1em;
+    /* padding-bottom: 1em; */
+    display: grid;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+
+.misionVision-right {
+    width: 500px;
+    height: 500px;
+    background: red;
+    border-radius: 275px;
+    background: #FCDE93;
+    display: grid;
+}
+
+/*******************Extras***************/
+
+.misionVision .misionVision-text {
+    font-size: 24px;
+    font-weight: 600;
+    width: 400px;
+    text-align: center;
+    line-height: 35px;
+    position: relative;
+    bottom: 10px;
+}
+
+.misionVision-left .misionVision-text {
+    position: relative;
+    /* bottom: 35px; */
+}
+
+.misionVision-right .misionVision-text {
+    width: 390px;
+}
+
+.misionVision-right .misionVision-text {
+    width: 390px;
+}
+
+.misionVision div {
+    grid-row: 2;
+    border: 0px;
+    justify-content: center;
+}
+
+
+/******************************/
+footer 
+ {/* position: absolute; */
+    z-index: 1;
+    /* background-color: #fcfbfb;
+    top: -215px;
+    position: relative; */
+    top: 15px;
+}   
+.footer-row{
+    position: relative;
+    z-index: 1;
+    top: 625px;
+}
