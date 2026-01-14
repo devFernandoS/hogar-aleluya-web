@@ -115,7 +115,6 @@ body{
     grid-area: equipo-right;
 }
 
-.equipo-img {}
 
 /*********extras*******************/
 .equipo div {
@@ -225,7 +224,6 @@ body{
 }
 
 /* Y así sucesivamente para los otros roles */
-.members-message{}
 
 .members-profile img{
     width: 8em;
