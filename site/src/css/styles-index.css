@@ -1810,10 +1810,9 @@ footer {
         width: 100vw;
         display: grid;
         grid-area: index-ayudanos-row;
-        grid-template-rows: auto auto;
+        grid-template-rows: 30% 50%;
         grid-template-areas:
-            'index-ayudanos-text-col'
-            'index-ayudanos-btn-col';
+            'index-ayudanos-text-col index-ayudanos-btn-col';
         background-color: var(--color-fondoPrincipalIndex);
         justify-content: center;
     }
@@ -1824,7 +1823,6 @@ footer {
         display: grid;
         grid-area: index-ayudanos-btn-col;
         align-items: center;
-        justify-content: space-between;
     }
 
     .ayudanos-donar-btn {
