@@ -1,0 +1,61 @@
+.slider {
+  background-image: url("/img/actividades/bg-nube.png");
+    /* background-image: url(/img/actividades/Bg-sup.png); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 27em;
+    position: relative;
+    overflow: hidden;
+    background-color: linear-gradient(0deg, #28A5FF, #28A5FF);
+    display: grid;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    justify-items: center;
+    justify-content: center;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slide {
+    flex-shrink: 0;
+    /* width: 31em; */
+    justify-content: center;
+    align-items: center;
+    height: 12em;
+
+  }
+  
+  .navigation {
+    display: flex;
+    margin-top: -10em;
+    width: 60em;
+    position: relative;
+    justify-content: space-between;
+  }
+  
+  .prev-button, 
+  .next-button {
+    margin: 0 5px;
+    /* Ajusta el ancho y alto según tus imágenes */
+    width: 30px;
+    height: 30px;
+  }
+  
+
+  .prev-button:hover,
+  .next-button:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  }
+
+  .active-slide{
+    display: grid;
+  }
+  .desactive-slide{
+    display: none;
+  }

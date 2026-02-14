@@ -1,0 +1,551 @@
+/* Fuentes */
+
+@font-face {
+    font-family: 'poetsenone-regular';
+    src: url('./fonts/PoetsenOne-Regular.ttf');
+    font-family: 'araboto';
+    src: url('./fonts/araboto-normal-400.ttf');
+    font-family: 'araboto-bold';
+    src: url('./fonts/araboto-bold-400.ttf');
+}
+
+
+:root {
+    --color-fondoPrincipal: #44aefa;;
+    /* Define el color de fondo deseado */
+    --imagen-aulas: url("../img/actividades/Areas Nube/areaAulaGuarderia.jpg");
+    --imagen-biblioteca: url("../img/actividades/Areas Nube/areaBibliotecarArte.jpg");
+    --imagen-computacion: url("../img/actividades/Areas Nube/areaComputacion.jpg");
+    --imagen-cocina: url("../img/actividades/Areas Nube/areaCocina.jpg");
+    --imagen-SUM: url("../img/actividades/Areas Nube/areaSUM.jpg")
+  }
+
+/* Fuentes - Color y Tipo */
+
+.titulo-negro {
+    font-family: 'poetsenone-regular';
+
+}
+
+.titulo-blanco {
+    font-family: 'poetsenone-regular';
+    color: white;
+    font-size: 70px;
+    font-weight: 100;
+}
+
+.texto-negro {
+    font-family: 'araboto';
+}
+
+.texto-blanco {
+    font-family: 'araboto';
+    color: white;
+}
+
+.texto-negro-bold {
+    font-family: 'araboto-bold';
+
+}
+
+.texto-blanco-bold {
+    font-family: 'araboto-bold';
+    color: white;
+}
+
+.titulo-azul {
+    font-family: 'poetsenone-regular';
+    color: #0094FF;
+    font-size: 48px;
+
+}
+
+.texto-azul {
+    font-family: 'poetsenone-regular';
+    color: #0094FF;
+    font-size: 24px;
+
+
+}
+
+
+
+/*******************************Nueva Convencion*******************************/
+.grid-container-actividades {
+    grid-area: main-row;
+    display: grid;
+    background-color: var(--color-fondoPrincipal);
+    position: relative;
+    grid-template-areas:
+        'nubes'
+        'sobrevivir'
+        'talleres';
+    grid-template-rows: auto auto auto;
+    padding-top: 4em; 
+    /* overflow: auto; */
+    /* Opción 1: Muestra barras de desplazamiento */
+}
+
+/*************************************Nubes ACtividades************************/
+
+.difuminada {
+    grid-area: nubes;
+    grid-column: 1 / 4;
+    background-color: var(--color-fondoPrincipal);
+
+}
+
+/******************/
+.nube-slider {
+    display: grid;
+    margin: 3em;
+    width: 42em;
+    justify-content: center;
+    justify-items: center;
+}
+
+.nube-slider-text {
+    font-family: 'poetsenone-regular';
+    color: #0094FF;
+    width: 28em;
+    font-size: 24px;
+}
+
+/*****************/
+
+.Nubes-contenedor {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+/******************/
+.Avioneta {
+    width: 5em;
+    height: 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Avioneta img {
+    max-width: 150%;
+}
+
+/******************/
+.nube{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 27em;
+    background-size: 44em 26em;
+    background-repeat: no-repeat;
+    transition: background-image 0.9s ease, color 0.9s ease;
+}
+.nube-divtitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nube-lado-derecho {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-size: 44em 26em;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: right;
+    flex-wrap: wrap;
+    -webkit-mask-image: url("../img/actividades/Recurso nube Der.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: bottom;
+    -webkit-mask-size: 41em 30em;
+    -webkit-mask-position-x: right;
+    height: 31em;
+    justify-content: end;
+    justify-items: stretch;
+}
+
+
+.nube-lado-izq {
+    display: flex;
+    background-size: 44em 26em;
+    background-color: white;
+    justify-content: flex-start;
+    flex-direction: row;
+    -webkit-mask-image: url("../img/actividades/Recurso nube Izq.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left;
+    -webkit-mask-size: 43em 29em;
+    -webkit-mask-position-x: 0px;
+    width: 47em;
+    height: 27em;
+}
+
+.nube-lado-izq.nube-lado-izq-Aulas:hover {
+    background-image: var(--imagen-aulas);
+    transition: opacity 0.9s ease;
+    color: aliceblue;
+}
+.nube-lado-derecho.nube-lado-der-Biblioteca:hover {
+    background-image: var(--imagen-biblioteca);
+    transition: opacity 0.9s ease;
+    color: aliceblue;
+   
+}
+.nube-lado-izq.nube-lado-izq-SaladeComputación:hover {
+    background-image: var(--imagen-computacion);
+    transition: opacity 0.9s ease;
+    color: aliceblue;
+}
+.nube-lado-derecho.nube-lado-der-Cocina:hover {
+    background-image: var(--imagen-cocina);
+    transition: opacity 0.9s ease;
+    color: aliceblue;
+   
+}
+
+.nube-lado-izq.nube-lado-izq-SalóndeUsosMúltiples:hover {
+    background-image: var(--imagen-SUM);
+    transition: opacity 0.9s ease;
+    color: aliceblue;
+}
+
+
+.nube-title {
+    font-family: 'poetsenone-regular';
+    color: #0094FF;
+    font-size: 48px;
+}
+
+.nube-text {
+    font-family: 'poetsenone-regular';
+    color: #0094FF;
+    font-size: 24px;
+    width: 24em;
+}
+
+.nube-divtitle:hover{
+    opacity: 1;
+}
+
+
+.nube-title,
+.nube-text,
+.nube-lado-izq {
+    transition: opacity 0.3s ease;
+}
+
+.nube-divtitle:hover .nube-title,
+.nube-divtitle:hover .nube-text,
+.nube-divtitle:hover .nube-lado-izq {
+    background-image: none;
+    background: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+
+}
+
+
+
+.centrar-texto {
+    text-align: center;
+}
+
+
+
+/***********************Area Sobrevivir*************************/
+.sobrevivir {
+    display: flex;
+    grid-area: sobrevivir;
+    grid-column: 1 / 4;
+    background: #BC6C24;
+    justify-items: center;
+    flex-direction: column;
+    align-content: stretch;
+
+}
+
+
+.sobrevivir-title {
+    font-family: 'poetsenone-regular';
+    color: white;
+    font-size: 70px;
+    font-weight: 100;
+    align-self: center;
+}
+
+.sobrevivir-img {
+    width: 100%;
+    padding: 5em;
+    height: 40em;
+
+}
+
+.sobrevivir-img-redes {
+    width: 6em;
+    padding: 0em;
+    height: 6em;  
+      box-shadow: 5px 0px 20px #BFBCBC;
+    border-radius: 1em
+    /* border-radius: 70% 70% 35% 35%;*/
+}
+.sobrevivir-text {
+    font-family: 'arial';
+    font-size: 40px;
+    color: white;
+    width: 90%;
+    align-self: center;
+}
+
+.sobrevivir-seguir-divtitle {
+    display: grid;
+    display: flex;
+    position: relative;
+    /* left: 18%; */
+    /* width: 0px; */
+    justify-content: flex-end;
+    padding-right: 4em;
+}
+
+.sobrevivir-seguir-text {
+    font-family: 'araboto-bold';
+    width: 7em;
+    font-size: 36px;
+    color: white;
+    text-decoration: none;
+}
+
+
+/******************************/
+
+.dibujo-separador-sobrevivir {
+    background-color: var(--color-fondoPrincipal);
+    position: relative;
+    overflow: hidden;
+    grid-column: 1/4;
+}
+
+.waves-sobrevivir {
+
+    left: 0;
+    width: 100%;
+    height: 10em;
+    background-color: #BC6C24;
+    clip-path: circle(50% at 50% 303.9%);
+    width: 100vw;
+    transform: scalex(3);
+}
+
+
+.separador-sobrevivir-superior-img{
+    /* display: grid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+/*************Conocenos -Talleres*********************/
+
+.talleres {
+    grid-area: talleres;
+    grid-column: 1 / 4;
+    display: grid;
+    border: 0px;
+    background: #9E4B00;
+    grid-template-areas:
+        'taller-superior'
+        ' taller-inferior';
+    /* Aquí se agrega una columna vacía entre talleres-izq y talleres-der */
+    grid-template-rows: auto 1fr;
+    /* Se ajusta el valor de las filas */
+}
+
+.talleres-superior {
+    /* display: grid; */
+    grid-area: taller-superior;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dibujo-separador {
+    position: relative;
+    position: relative;
+    width: 100%;
+    background: #BC6D2A;
+}
+
+.talleres-superior-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #BC6D2A;
+    width: 100%;
+}
+
+
+.talleres-title {
+    font-family: 'poetsenone-regular';
+    color: white;
+    font-size: 70px;
+    font-weight: 100;
+
+    grid-column: 1 / 3;
+    display: grid;
+    /* height: 10em; */
+    justify-items: center;
+    align-items: end;
+    padding: 1em;
+    border-radius: 10px 120px 10px 10px;
+
+}
+
+/**************/
+.talleres-inferior {
+    display: grid;
+    grid-area: taller-inferior;
+    grid-template-areas:
+        'talleres-izq  talleres-der';
+    /* Aquí se agrega una columna vacía entre talleres-izq y talleres-der */
+    grid-template-columns: 40% 60%;
+    padding: 1em;
+    align-items: end;
+}
+
+/**************/
+.talleres-izq {
+    grid-area: talleres-izq;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.talleres-img {
+    max-height: 80%;
+    max-width: 100%;
+}
+
+/**************/
+.talleres-der {
+    display: grid;
+    grid-area: talleres-der;
+    height: 100%;
+    align-content: space-between;
+
+}
+
+.talleres-text {
+    font-family: 'arial';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 28px;
+    line-height: 40px;
+    color: #FFFFFF;
+    width: 95%;
+}
+
+
+.talleres-conocermas {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 95%;
+    align-items: center;
+}
+
+.conocermas-divtitle {}
+
+.conocermas-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 35px;
+    color: #FFFFFF;
+    width: 9em;
+}
+
+.conocermas-seguirleyendo {
+    /* width:270px; */
+    line-height: 40px;
+}
+
+.conocermas-btn {
+    font-size: 3vw;
+    /* Ajusta el tamaño de fuente en relación al ancho de la ventana */
+    color: #84341B;
+    font-weight: bolder;
+    text-decoration: none;
+    font-stretch: extra-condensed;
+    font-family: 'calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+   
+    border: 0px;
+    border-radius: 10px;
+    background-color: #F0CB11;
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 30px;
+    margin-top: 10px;
+ 
+    box-shadow: 5px 0px 20px #BFBCBC;
+
+     
+    /* color: rgb(136, 95, 0); */
+}
+
+
+
+.seguir {
+    display: grid;
+    position: relative;
+    left: 18%;
+    width: 0px;
+
+
+}
+
+.seguir p {
+
+    width: 180px;
+    text-align: left;
+    position: relative;
+
+}
+
+.seguir img {
+    height: 75px;
+    grid-column: 2;
+    margin-top: 0px;
+
+}
+
+.conocermas-btn:hover {
+    background: linear-gradient(0deg, rgba(201, 157, 0, 0.85) 0%, rgba(255, 213, 28, 0.85) 20%, rgba(255, 236, 30, 0.85) 100%);
+    background-color: #f7d116;
+    box-shadow: #FFFFFF;
+    justify-content: center;
+
+    text-decoration: none;
+    font-family: 'calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgb(136, 95, 0);
+    /* font-size: 26px; */
+}
+
+/*********************************/
+/*********FOOTER**********/
+
+footer {
+    background-color: #9E4B00;
+}
