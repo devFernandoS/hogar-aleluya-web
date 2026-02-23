@@ -1,0 +1,321 @@
+
+body{
+    background-color:#FFEA9E;
+}
+
+:root{
+    --color-fondoPrincipal: #ffffff;
+}
+/* Fuentes */
+
+
+@font-face{
+font-family: 'poetsenone-regular';
+src: url('./fonts/PoetsenOne-Regular.ttf');
+}
+
+@font-face{
+font-family: 'araboto';
+src: url('./fonts/araboto-normal-400.ttf');
+    
+}
+
+@font-face{
+font-family: 'araboto-bold';
+src: url('./fonts/araboto-bold-400.ttf');
+    
+}
+
+/* Fuentes - Color y Tipo */
+
+.titulo-blanco{
+    font-family:'poetsenone-regular';
+    color:white;
+    font-size:60px;
+    font-weight: 100;
+}
+
+.texto-blanco{
+    font-family:'araboto';
+    color:white;
+    font-size: 28px;
+    font-weight:100;
+    line-height:35px;
+}
+
+.header-row {
+background: #ffffff;
+background: linear-gradient(white 90%, #fffbed);
+
+}
+
+
+/* NUEVAS CONVECIONES */
+
+.grid-container-eventos{
+    grid-area:'main-row';
+    display: grid;
+    /* background-color: cornsilk; */
+    padding-top:  15%;
+     position: relative; 
+     padding-top: 4em; 
+}
+
+.blurred {
+    background: #FFEA9E;
+    /* border-radius: -56px; */
+    /* border: 1px solid transparent; */
+    /* padding: 20px; */
+    /* backdrop-filter: blur(187px); */
+    box-shadow: inset 1px 15px 75px 25px rgb(255 255 255 / 82%);
+  }
+
+
+  .eventos-programado{   
+    display: grid;
+    background-image: url(../img/eventos/Bg-Evento.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 72em 70em;
+    justify-content: space-around;
+    align-items: unset;
+    padding: 6em 0em 6em 0em;
+    height: 72em;
+}
+
+.eventos-programado-divtitle{
+
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+    width: min-content;
+    padding-top: 2em;
+
+}
+
+.eventos-programado-divtitle input[type="date"] {
+ 
+    position: relative;
+    top: -5em;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    bottom: 0;
+    /* Si quieres-ser-voluntarios cambiar la apariencia del calendario, aquí puedes agregar estilos */
+}
+
+.evento-title{
+    font-family: 'poetsenone-regular';
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: normal;
+
+    line-height: 108px;
+    text-align: center;
+    /* padding-bottom: 2em; */
+}
+
+.evento-img{
+    /* max-width: 45em; */
+    width: 55em;
+    /* height: auto; */
+    height: 32em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    border-radius: 60px;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+.evento-text{
+    font-family: 'araboto';
+    color: white;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 35px;
+    text-align: left;
+    max-width: 60em;
+    height: auto;
+}
+.ultimo-evento{
+    height: 97em;
+    display: grid;
+    /* background-image: url(../img/eventos/Bg-Evento.png); */
+    /* background-position: bottom; */
+    /* background-repeat: no-repeat; */
+    background-size: 80em 96em;
+    justify-content: space-around;
+    /*align-items: center; */
+    /* padding: 0em 9em 98em 9em;*/
+}
+/*********************************/
+.footer-superpuesto{
+    position: relative;
+    bottom: 0;
+    /* width: 100%; */
+    height: 100px;
+    /* background-color: #333; */
+    /* color: #fff; */
+    /* text-align: center; */
+    top: -25em;
+}
+
+   /* Establecer el fondo del calendario */
+#calendario { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    padding: 2em; 
+    margin: 2em;
+    width: 150px;
+  }
+  
+  .calendario-nota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transform: skew(-10deg);
+    margin-right: 1em;
+  }
+  
+  .calendario-nota-dia {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .calendario-nota-mes {
+    font-size: 1.5em;
+    text-align: center;
+    transform: skew(10deg);
+  }
+  
+  .contenedor {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  .calendario {
+    position: absolute;
+    bottom: 3em;
+    right: 2em;
+  }
+
+
+
+  /*****************************************************/
+.footer{
+    top: -100px;
+    padding-bottom: 500p;
+    position: relative;
+}
+
+
+.ubicacion-evento{
+    position:relative;
+     justify-items:center;
+    padding-left:925px;
+    
+}
+
+.ubicacion-evento img{
+    margin-bottom:10px;
+    height:68px;
+    width:52px;
+}
+
+.ubicacion-evento p{
+    line-height:50px;
+}
+
+.evento1{
+    justify-items: center;
+    
+}
+
+.evento2{
+    justify-items: center;
+}
+
+.evento3{
+    justify-items: center;
+}
+
+.evento4{
+    justify-items: center;
+}
+
+.evento5{
+    justify-items: center;
+}
+
+.evento1 h4{
+    text-align: left;
+    width:1100px;
+    margin-top:90px;
+    padding-left:50px;
+    padding-bottom:50px;
+}
+
+.evento2 h4{
+    text-align: left;
+    width:1100px;
+    margin-top:90px;
+    padding-left:50px;
+    padding-bottom:50px;
+}
+
+.evento3 h4{
+    text-align: left;
+    width:1100px;
+    margin-top:90px;
+    padding-left:50px;
+    padding-bottom:50px;
+}
+
+.evento4 h4{
+    text-align: left;
+    width:1100px;
+    margin-top:90px;
+    padding-left:50px;
+    padding-bottom:50px;
+}
+
+.evento5 h4{
+    text-align: left;
+    width:1100px;
+    margin-top:90px;
+    padding-left:50px;
+    padding-bottom:50px;
+}
+
+.evento1 h1{
+    padding-bottom:100px;
+}
+
+.evento2 h1{
+    padding-bottom:100px;
+}
+
+.evento3 h3{
+    padding-bottom:100px;
+}
+
+.evento4 h1{
+    padding-bottom:100px;
+}
+
+.evento5 h1{
+    padding-bottom:100px;
+}
