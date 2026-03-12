@@ -12,11 +12,11 @@
     display: grid;
     grid-area: main-row;
 
-    grid-template-rows:
-        auto auto auto auto auto auto /* Changed fixed heights to auto for responsiveness */
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
         'index-nosotros-row'
-        'index-actividades-row',
-        'index-eventos-row',
+        'index-actividades-row'
+        'index-eventos-row'
         'index-voluntarios-row'
         'index-testimonios-row'
         'index-ayudanos-row';
@@ -504,10 +504,11 @@
     font-weight: 500;
 }
 
-.index-testimonios-movie-row {
-    display: grid;
-
-    width: 100%;
+.index-testimonios-movie-row,
+.frame-video {
+    /* display: grid; */
+    grid-area: index-testimonios-movie-row;
+    /* width: 100%; */
     max-width: 1080px; /* Modernización: Se adapta a pantallas más pequeñas */
     aspect-ratio: 16 / 9; /* Modernización: Mantiene la proporción del video automáticamente */
     margin-bottom: 5.625rem; /* Converted to rem */
