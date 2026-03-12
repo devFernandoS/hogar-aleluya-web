@@ -1,0 +1,35 @@
+{
+  "name": "hogar-aleluya",
+  "version": "2.1.0",
+  "description": "Sitio web oficial de Hogar Aleluya - ONG",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:dev": "cross-env NODE_ENV=development node scripts/build.js",
+    "build:prod": "cross-env NODE_ENV=production node scripts/build.js",
+    "dev": "vite src",
+    "dev:serve": "npx serve dist -p 8080",
+    "clean": "node scripts/clean.js",
+    "prebuild": "npm run clean",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting"
+  },
+  "keywords": [
+    "hogar-aleluya",
+    "ong",
+    "firebase",
+    "static-site"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "firebase-tools": "^13.0.0",
+    "fs-extra": "^11.2.0",
+    "replace-in-file": "^7.0.0",
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
