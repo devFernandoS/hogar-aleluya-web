@@ -76,10 +76,15 @@ La decisión principal fue **evitar costos recurrentes**.
 /
 ├── api/
 │   └── send-email.js      # Función Serverless para Vercel
-├── src/
-│   ├── js/
-│   │   └── formHandler.js # Lógica del formulario que llama a la API
-│   └── ...                # Resto de archivos estáticos (HTML, CSS)
+├── site/
+│   ├── src/
+│   │   ├── js/
+│   │   │   └── formHandler.js # Lógica del formulario que llama a la API
+│   │   ├── css/
+│   │   ├── img/
+│   │   └── *.html             # Archivos HTML
+│   ├── dist/              # Carpeta de build, contenido desplegado en Firebase
+│   └── ...
 ├── vercel.json            # Configuración de Vercel (CORS, reescrituras)
 └── firebase.json          # Configuración de Firebase Hosting
 ```
