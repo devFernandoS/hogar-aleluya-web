@@ -398,6 +398,8 @@ z-index: 0; */
     display: grid;
     grid-area: footer-top-row;
     /* height: 4em; */
+    padding-top: 6rem;
+
 }
 
 .footer-center-row {
@@ -692,25 +694,30 @@ z-index: 0; */
     .circulo-header-logo svg {
         position: relative;
         z-index: 8;
-        width: 27vw;
-        height: 18vw;
+        width: 25vw;
+        height: 16vw;
     }
 
     .isologo-col img {
         position: relative;
         z-index: 9;
-        width: 17vw;
-        height: 10vw;
+        width: 15vw;
+        height: 8vw;
         left: 1vw;
         top: 0vw;
     }
 
+    .navbar-col ul {
+        display: grid;
+        gap: 0.5rem;
+    }
 
     .navbar-col a {
         font-size: 1rem; /* Converted to rem for better scaling */
         /* O ajusta según necesidades */
     }
 
+    
     .navbar-col li {
         display: grid;
         grid-row: 1 / 5;
@@ -980,6 +987,7 @@ z-index: 0; */
         display: grid;
         grid-area: footer-top-row;
         /* height: 4em; */
+        
         width: 100vw;
     }
 

@@ -97,7 +97,7 @@
 
 .index-nosotros-img-col img {
     max-width: 100%; /* Ensure image scales down */
-    height: auto; /* Maintain aspect ratio */
+    /*height: auto; */ /* Maintain aspect ratio */
     border-radius: 25em;
     object-fit: cover; /* Evita que la imagen se deforme al forzar el tamaño */
 }
@@ -272,7 +272,8 @@
         'index-verMas-btn-row';
     grid-row-gap: 3.75rem; /* Converted to rem */
     /* Removed fixed width and height for responsiveness */
-    max-width: 90%; /* Allow it to shrink */
+    max-width: 60%; /* Allow it to shrink */
+    height: 50rem;
     aspect-ratio: 1 / 1; /* Maintain circular shape */
     align-items: center;
     justify-items: center;
@@ -399,7 +400,7 @@
 
 .index-eventos-img-col img {
     max-width: 100%; /* Ensure image scales */
-    height: auto; /* Maintain aspect ratio */
+    /*height: auto; */ /* Maintain aspect ratio */
     border-radius: 16em;
     object-fit: cover;
 }
@@ -435,7 +436,7 @@
     justify-items: center;
     align-items: center;
 
-    grid-row-gap: 1rem; /* Converted to rem */
+    grid-row-gap: 3rem; /* Converted to rem */
 
     background-color: var(--color-fondoPrincipalIndex);
 }
@@ -1609,12 +1610,13 @@ footer {
         margin-bottom: 2rem;
         align-items: end;
         justify-items: center;
+        gap: 2rem;
         width: auto;
     }
 
 
     .index-actividades-programa-row {
-        width: 100vw;
+        
         display: grid;
         grid-area: index-actividades-programa-row;
         grid-template-rows: auto auto auto;
@@ -1625,6 +1627,7 @@ footer {
         grid-row-gap: 2rem; /* Keep grid-row-gap */
         /* Removed fixed width and height */
         max-width: 90%; /* Ensure it's responsive */
+        height: 40rem;
         aspect-ratio: 1 / 1; /* Maintain circular shape */
         align-items: center;
         justify-items: center;
@@ -1730,7 +1733,7 @@ footer {
             'index-verMas-btn-row';
         justify-items: center;
         align-items: center;
-        grid-row-gap: 0px;
+        grid-row-gap: 1rem;
         background-color: var(--color-fondoPrincipalIndex);
     }
 
@@ -1751,7 +1754,7 @@ footer {
         width: 100vw;
         display: grid;
         grid-area: index-testimonios-main-row;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto 15rem auto;
         grid-template-areas:
             'index-testimonios-title-row'
             'index-testimonios-movie-row'
@@ -1811,7 +1814,7 @@ footer {
         width: 100vw;
         display: grid;
         grid-area: index-ayudanos-row;
-        grid-template-rows: 30% 50%;
+        grid-template-columns: 40% 40%;
         grid-template-areas:
             'index-ayudanos-text-col index-ayudanos-btn-col';
         background-color: var(--color-fondoPrincipalIndex);
