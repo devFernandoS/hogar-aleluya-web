@@ -64,6 +64,10 @@ Aquí está la lista de los comandos más importantes definidos en `package.json
 ```
 site/
 ├── src/           # Código fuente (aquí editas)
+│   ├── css/
+│   ├── js/
+│   ├── img/
+│   └── *.html
 ├── dist/          # Código compilado (generado automáticamente)
 └── ...
 ```
