@@ -800,6 +800,9 @@ z-index: 0; */
         align-items: center;
         justify-content: space-evenly;
         width: 100vw;
+        height: 21rem;
+        align-content: center;
+
     }
 
 
@@ -1074,6 +1077,8 @@ z-index: 0; */
         align-items: center;
         justify-content: space-evenly;
         width: 100vw;
+        height: 15rem;
+
 }
     
 
